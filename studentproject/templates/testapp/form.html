@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form method="post">
+      {{forms.as_p}}
+      {%csrf_token%}
+      <input type="submit" class="btn btn-primary" value="ADD DETAILS" >
+      <a href="student/">click here to see details</a>
+    </form>
+  </body>
+</html>

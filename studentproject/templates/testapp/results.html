@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Students information</h1><hr>
+    {% if students %}
+         <table border="2">
+           <thead>
+             <th>student rollnum</th>
+             <th>student name </th>
+             <th>student dob </th>
+             <th>student marks </th>
+             <th>student email</th>
+             <th>student phonenumber</th>
+             <th>student address</th>
+           </thead>
+
+         {% for s in students %}
+             <tr>
+               <td>{{s.rollnum}}</td>
+               <td>{{s.name}}</td>
+               <td>{{s.dob}}</td>
+               <td>{{s.marks}}</td>
+               <td>{{s.email}}</td>
+               <td>{{s.phonenumber}}</td>
+               <td>{{s.address}}  </td>
+            </tr>
+            {%endfor%}
+          </table>
+          {%else%}
+          <p>no infermation found!!!</p>
+        {%endif%}
+
+  </body>
+</html>
